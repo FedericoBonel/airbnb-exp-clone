@@ -1,0 +1,9 @@
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: fit-content;
+    gap: 20px;
+    overflow-y: hidden;
+    overflow-x: auto;
+}

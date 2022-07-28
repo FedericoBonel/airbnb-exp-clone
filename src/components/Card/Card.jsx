@@ -1,19 +1,36 @@
 import "./Card.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-//! REMOVE THIS
-import ExpImg from "../../images/katie-zaferes.png";
 
-const Card = ({ title, rating, reviewCount, location, price }) => {
+const Card = ({ item }) => {
+    const { title, stats, location, price, coverImg, openSpots } = item;
+    const soldOut = openSpots === 0;
+
+    let badgeText;
+    if (soldOut) {
+        badgeText = "SOLD OUT";
+    } else if (location.toLowerCase() === "online") {
+        badgeText = "ONLINE";
+    }
+
     return (
         <article className="card--container">
-            <img className="card--container_img" src={ExpImg} alt="exp-img" />
+            <div>
+                {badgeText && (
+                    <div className="card--container_img-badge">{badgeText}</div>
+                )}
+                <img
+                    className="card--container_img"
+                    src={require(`../../images/${coverImg}`)}
+                    alt="exp-img"
+                />
+            </div>
             <div className="card--container_raiting">
                 <FontAwesomeIcon icon={faStar} id="star-icon" />
-                <p id="card--container_raiting-number">
-                    {`${rating.toFixed(1)}`}
-                </p>
-                <p className="grey-font">{`(${reviewCount}) • ${location}`}</p>
+                <p id="card--container_raiting-number">{`${stats.rating.toFixed(
+                    1
+                )}`}</p>
+                <p className="grey-font">{`(${stats.reviewCount}) • ${location}`}</p>
             </div>
             <p className="card--container_title">{title}</p>
             <p className="card--container_price">

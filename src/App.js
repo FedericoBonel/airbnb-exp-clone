@@ -2,30 +2,20 @@ import "./App.css";
 
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
-import Card from "./components/Card/Card";
+import CardList from "./components/CardList/CardList";
+
+// TODO extract this to an API
+import Experiences from "./temp-db/Experiences"
 
 function App() {
-    const experience = {
-        rating: 5.0,
-        reviewCount: 6,
-        title: "Life lessons with Katie Zaferes",
-        usdPerPerson: 136,
-        location: "USA",
-    };
+    // TODO extract this to an API
+    const cards = Experiences;
 
     return (
         <div className="App">
             <Navbar />
             <Hero />
-            <section>
-                <Card
-                    title={experience.title}
-                    rating={experience.rating}
-                    reviewCount={experience.reviewCount}
-                    price={experience.usdPerPerson}
-                    location={experience.location}
-                />
-            </section>
+            <CardList cards={cards}/>
         </div>
     );
 }
