@@ -7,13 +7,9 @@
 }
 
 .card--container_img {
+    max-width: 100%;
     margin: 0;
-    height: 235px;
-}
-
-.card--container_img img {
     border-radius: 9px;
-    width: 100%;
 }
 
 .card--container_raiting {

@@ -10,14 +10,22 @@ function App() {
         reviewCount: 6,
         title: "Life lessons with Katie Zaferes",
         usdPerPerson: 136,
-        country: "USA",
+        location: "USA",
     };
 
     return (
         <div className="App">
             <Navbar />
             <Hero />
-            <section><Card experience={experience} /></section>
+            <section>
+                <Card
+                    title={experience.title}
+                    rating={experience.rating}
+                    reviewCount={experience.reviewCount}
+                    price={experience.usdPerPerson}
+                    location={experience.location}
+                />
+            </section>
         </div>
     );
 }
