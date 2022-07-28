@@ -1,0 +1,32 @@
+.hero--container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero--container_img {
+    width: 90%;
+    max-width: fit-content;
+}
+
+.hero--container_text {
+    width: 100%;
+    margin: 0;
+}
+
+.hero--container_text h1 {
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 110%;
+}
+
+.hero--container p {
+    margin-top: 0;
+    width: 70%;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 110%;
+    color: #222222;
+}

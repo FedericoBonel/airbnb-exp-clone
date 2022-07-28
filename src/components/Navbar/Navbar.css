@@ -1,0 +1,26 @@
+.navbar-container {
+    height: 70px;
+    position: sticky;
+    top: 0;
+    padding: 22px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0px 3px 7.4px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+#bnb-icon {
+    margin-right: 4px;
+    max-width: 100px;
+}
+
+.navbar--container_brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    color: #FF5A5F;
+    font-weight: 600;
+    font-size: 1rem;
+}
